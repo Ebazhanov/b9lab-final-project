@@ -1,0 +1,703 @@
+  TestOwnedA
+    ✓ testInitialOwner (175ms)
+    ✓ testCanChangeOwner (230ms)
+
+
+  TestOwnedB
+    ✓ testInitialOwner (73ms)
+    ✓ testCanChangeOwner (90ms)
+
+
+  Contract: Owned inheritance tree
+    ✓ should have correct number of functions (69ms)
+    Owned
+      getOwner
+        ✓ should have correct initial value
+        ✓ should be possible to ask for owner from any address
+        ✓ should be possible to send a transaction to getOwner (53ms)
+        ✓ should not be possible to send a transaction with value to getOwner
+      setOwner
+        ✓ should not be possible to set owner if asking from wrong owner
+        ✓ should not be possible to set owner if to 0
+        ✓ should not be possible to set owner if no change
+        ✓ should not be possible to set owner if pass value
+        ✓ should be possible to set owner (104ms)
+      setOwner a second time
+        ✓ should not be possible to set owner if asking from wrong one
+        ✓ should be possible to set owner again (95ms)
+    Pausable
+      getOwner
+        ✓ should have correct initial value
+        ✓ should be possible to ask for owner from any address
+        ✓ should be possible to send a transaction to getOwner (53ms)
+        ✓ should not be possible to send a transaction with value to getOwner
+      setOwner
+        ✓ should not be possible to set owner if asking from wrong owner
+        ✓ should not be possible to set owner if to 0
+        ✓ should not be possible to set owner if no change
+        ✓ should not be possible to set owner if pass value
+        ✓ should be possible to set owner (97ms)
+      setOwner a second time
+        ✓ should not be possible to set owner if asking from wrong one
+        ✓ should be possible to set owner again (91ms)
+    Regulator
+      getOwner
+        ✓ should have correct initial value
+        ✓ should be possible to ask for owner from any address
+        ✓ should be possible to send a transaction to getOwner (51ms)
+        ✓ should not be possible to send a transaction with value to getOwner
+      setOwner
+        ✓ should not be possible to set owner if asking from wrong owner
+        ✓ should not be possible to set owner if to 0 (46ms)
+        ✓ should not be possible to set owner if no change
+        ✓ should not be possible to set owner if pass value
+        ✓ should be possible to set owner (104ms)
+      setOwner a second time
+        ✓ should not be possible to set owner if asking from wrong one
+        ✓ should be possible to set owner again (115ms)
+    DepositHolder
+      getOwner
+        ✓ should have correct initial value
+        ✓ should be possible to ask for owner from any address
+        ✓ should be possible to send a transaction to getOwner (54ms)
+        ✓ should not be possible to send a transaction with value to getOwner
+      setOwner
+        ✓ should not be possible to set owner if asking from wrong owner
+        ✓ should not be possible to set owner if to 0
+        ✓ should not be possible to set owner if no change
+        ✓ should not be possible to set owner if pass value
+        ✓ should be possible to set owner (92ms)
+      setOwner a second time
+        ✓ should not be possible to set owner if asking from wrong one
+        ✓ should be possible to set owner again (88ms)
+    MultiplierHolder
+      getOwner
+        ✓ should have correct initial value
+        ✓ should be possible to ask for owner from any address
+        ✓ should be possible to send a transaction to getOwner (46ms)
+        ✓ should not be possible to send a transaction with value to getOwner
+      setOwner
+        ✓ should not be possible to set owner if asking from wrong owner
+        ✓ should not be possible to set owner if to 0
+        ✓ should not be possible to set owner if no change
+        ✓ should not be possible to set owner if pass value
+        ✓ should be possible to set owner (100ms)
+      setOwner a second time
+        ✓ should not be possible to set owner if asking from wrong one
+        ✓ should be possible to set owner again (89ms)
+    RoutePriceHolder
+      getOwner
+        ✓ should have correct initial value
+        ✓ should be possible to ask for owner from any address
+        ✓ should be possible to send a transaction to getOwner (46ms)
+        ✓ should not be possible to send a transaction with value to getOwner
+      setOwner
+        ✓ should not be possible to set owner if asking from wrong owner
+        ✓ should not be possible to set owner if to 0
+        ✓ should not be possible to set owner if no change
+        ✓ should not be possible to set owner if pass value
+        ✓ should be possible to set owner (90ms)
+      setOwner a second time
+        ✓ should not be possible to set owner if asking from wrong one
+        ✓ should be possible to set owner again (88ms)
+    TollBoothHolder
+      getOwner
+        ✓ should have correct initial value
+        ✓ should be possible to ask for owner from any address
+        ✓ should be possible to send a transaction to getOwner (49ms)
+        ✓ should not be possible to send a transaction with value to getOwner
+      setOwner
+        ✓ should not be possible to set owner if asking from wrong owner
+        ✓ should not be possible to set owner if to 0
+        ✓ should not be possible to set owner if no change
+        ✓ should not be possible to set owner if pass value
+        ✓ should be possible to set owner (91ms)
+      setOwner a second time
+        ✓ should not be possible to set owner if asking from wrong one
+        ✓ should be possible to set owner again (101ms)
+    TollBoothOperator
+      getOwner
+        ✓ should have correct initial value
+        ✓ should be possible to ask for owner from any address
+        ✓ should be possible to send a transaction to getOwner (57ms)
+        ✓ should not be possible to send a transaction with value to getOwner
+      setOwner
+        ✓ should not be possible to set owner if asking from wrong owner
+        ✓ should not be possible to set owner if to 0
+        ✓ should not be possible to set owner if no change
+        ✓ should not be possible to set owner if pass value
+        ✓ should be possible to set owner (102ms)
+      setOwner a second time
+        ✓ should not be possible to set owner if asking from wrong one
+        ✓ should be possible to set owner again (94ms)
+
+
+  TestRegulator
+    ✓ testInitialOwner (96ms)
+    ✓ testVehicleTypeStartsAtZero (71ms)
+    ✓ testCanSetAndGetVehicleType (90ms)
+    ✓ testCanCreateTollBoothOperator (183ms)
+    ✓ testCanCreateAndRemoveTollBoothOperator (199ms)
+
+
+  Contract: Regulator
+    ✓ should not be possible to deploy a Regulator with value
+    ✓ should be possible to deploy a Regulator (87ms)
+    ✓ should have correct number of functions
+
+
+  Contract: Regulator, Toll Booth Operator
+    isOperator
+      ✓ should have correct initial value (126ms)
+      ✓ should be possible to ask for operator status from any address
+      ✓ should be possible to send a transaction to isOperator (192ms)
+      ✓ should not be possible to send a transaction with value to isOperator
+    createNewOperator
+      ✓ should not be possible to create an operator if asking from wrong owner
+      ✓ should not be possible to create an operator if owner is address 0 (134ms)
+      ✓ should not be possible to create an operator if owner is same as that of regulator
+      ✓ should not be possible to create an operator if deposit is 0
+      ✓ should not be possible to create an operator if pass value
+      ✓ should be possible to create an operator (476ms)
+    createNewOperator a second time
+      ✓ should be possible to create an operator again with values 0 - 0 (527ms)
+      ✓ should be possible to create an operator again with values 0 - 1 (511ms)
+      ✓ should be possible to create an operator again with values 1 - 0 (523ms)
+      ✓ should be possible to create an operator again with values 1 - 1 (466ms)
+    createNewOperator a second time after an owner change
+      ✓ should not be possible to create an operator if old owner
+      ✓ should be possible to create an operator again (774ms)
+    removeOperator
+      ✓ should not be possible to remove an operator if asking from wrong owner (75ms)
+      ✓ should not be possible to remove an operator if address 0 (73ms)
+      ✓ should not be possible to remove an operator if address is not an operator (46ms)
+      ✓ should not be possible to remove an operator if pass value
+      ✓ should be possible to remove an operator (573ms)
+    removeOperator after an owner change
+      ✓ should not be possible to remove an operator if old owner (38ms)
+      ✓ should be possible to remove an operator if from new owner (475ms)
+
+
+  Contract: Regulator, Vehicle Type
+    getVehicleType
+      ✓ should have correct initial value (212ms)
+      ✓ should be possible to ask for vehicle type from any address (79ms)
+      ✓ should be possible to send a transaction to getVehicleType (66ms)
+      ✓ should not be possible to send a transaction with value to getVehicleType
+    setVehicleType
+      ✓ should not be possible to set vehicle type if asking from wrong owner
+      ✓ should not be possible to set vehicle type if no change
+      ✓ should not be possible to set vehicle type of vehicle 0x
+      ✓ should not be possible to set vehicle type if pass value
+      ✓ should be possible to set vehicle type of 1 vehicle (481ms)
+    setVehicleType a second time
+      ✓ should not be possible to set vehicle type if same one
+      ✓ should be possible to set vehicle type again (200ms)
+      ✓ should be possible to set vehicle type back to 0 (222ms)
+      ✓ should be possible to set vehicle type of another vehicle (187ms)
+    setVehicleType a second time after an owner change
+      ✓ should not be possible to set vehicle type if old owner (40ms)
+      ✓ should not be possible to set vehicle type if same one (39ms)
+      ✓ should be possible to set vehicle type again (106ms)
+      ✓ should be possible to set vehicle type back to 0 (118ms)
+
+
+  TestPausable
+    ✓ testInitialPaused (146ms)
+    ✓ testCanChangePaused (320ms)
+
+
+  Contract: Pausable inheritance tree
+    ✓ should have correct number of functions (139ms)
+    Pausable
+      isPaused
+        ✓ should have correct constructor value (43ms)
+        ✓ should be possible to ask for paused from any address
+        ✓ should be possible to send a transaction to isPaused (86ms)
+        ✓ should not be possible to send a transaction with value to isPaused
+      setPaused
+        ✓ should not be possible to set paused if asking from wrong owner
+        ✓ should not be possible to set paused if no change
+        ✓ should not be possible to set paused if pass value
+        ✓ should be possible to set paused (217ms)
+      setPaused a second time
+        ✓ should not be possible to set paused if asking from wrong owner (64ms)
+        ✓ should be possible to set paused again (105ms)
+      setPaused after owner change
+        ✓ should not be possible to set paused if asking from old owner (63ms)
+        ✓ should be possible to set paused from new owner (234ms)
+    PausableMock
+      isPaused
+        ✓ should have correct constructor value
+        ✓ should be possible to ask for paused from any address (51ms)
+        ✓ should be possible to send a transaction to isPaused (70ms)
+        ✓ should not be possible to send a transaction with value to isPaused
+      setPaused
+        ✓ should not be possible to set paused if asking from wrong owner
+        ✓ should not be possible to set paused if no change (38ms)
+        ✓ should not be possible to set paused if pass value
+        ✓ should be possible to set paused (109ms)
+      setPaused a second time
+        ✓ should not be possible to set paused if asking from wrong owner
+        ✓ should be possible to set paused again (128ms)
+      setPaused after owner change
+        ✓ should not be possible to set paused if asking from old owner (69ms)
+        ✓ should be possible to set paused from new owner (170ms)
+    TollBoothOperator
+      isPaused
+        ✓ should have correct constructor value
+        ✓ should be possible to ask for paused from any address
+        ✓ should be possible to send a transaction to isPaused (71ms)
+        ✓ should not be possible to send a transaction with value to isPaused
+      setPaused
+        ✓ should not be possible to set paused if asking from wrong owner
+        ✓ should not be possible to set paused if no change (43ms)
+        ✓ should not be possible to set paused if pass value
+        ✓ should be possible to set paused (143ms)
+      setPaused a second time
+        ✓ should not be possible to set paused if asking from wrong owner (38ms)
+        ✓ should be possible to set paused again (200ms)
+      setPaused after owner change
+        ✓ should not be possible to set paused if asking from old owner (229ms)
+        ✓ should be possible to set paused from new owner (258ms)
+    modifiers
+      whenPaused
+        ✓ should not allow countUpWhenNotPaused (41ms)
+        ✓ should allow countUpWhenPaused (121ms)
+      whenNotPaused
+        ✓ should not allow countUpWhenPaused (51ms)
+        ✓ should allow countUpWhenNotPaused (123ms)
+
+
+  TestRegulated
+    ✓ testInitialRegulator (49ms)
+    ✓ testCanChangeRegulator (59ms)
+
+
+  Contract: Regulated inheritance tree
+    ✓ should fail to deploy a Regulated with 0 regulator (55ms)
+    ✓ should fail to deploy a TollBoothOperator with 0 regulator (121ms)
+    ✓ should have correct number of functions (131ms)
+    Regulated
+      getRegulator
+        ✓ should have correct constructor value
+        ✓ should be possible to ask for regulator from any address
+        ✓ should be possible to send a transaction to getRegulator (117ms)
+        ✓ should not be possible to send a transaction with value to getRegulator
+      setRegulator
+        ✓ should not be possible to set regulator if asking from wrong regulator (42ms)
+        ✓ should not be possible to set regulator if no change (55ms)
+        ✓ should not be possible to set regulator if pass 0 (59ms)
+        ✓ should not be possible to set regulator if pass value
+        ✓ should be possible to set regulator (221ms)
+      setRegulator a second time
+        ✓ should not be possible to set regulator if asking from wrong owner
+        ✓ should be possible to set regulator again (126ms)
+    TollBoothOperator
+      getRegulator
+        ✓ should have correct constructor value (41ms)
+        ✓ should be possible to ask for regulator from any address (67ms)
+        ✓ should be possible to send a transaction to getRegulator (77ms)
+        ✓ should not be possible to send a transaction with value to getRegulator
+      setRegulator
+        ✓ should not be possible to set regulator if asking from wrong regulator (106ms)
+        ✓ should not be possible to set regulator if no change (43ms)
+        ✓ should not be possible to set regulator if pass 0 (51ms)
+        ✓ should not be possible to set regulator if pass value
+        ✓ should be possible to set regulator (263ms)
+      setRegulator a second time
+        ✓ should not be possible to set regulator if asking from wrong owner
+        ✓ should be possible to set regulator again (174ms)
+
+
+  TestDepositHolder
+    ✓ testInitialDeposit (139ms)
+    ✓ testSetDeposit (91ms)
+    ✓ testCanSetDepositManyTimes_DepositHolder (5741ms)
+    ✓ testCanSetDepositManyTimes_TollBoothOperator (4044ms)
+
+
+  Contract: DepositHolder inheritance tree
+    ✓ should fail to deploy a DepositHolder with 0 deposit (114ms)
+    ✓ should fail to deploy a TollBoothOperator with 0 deposit
+    ✓ should have correct number of functions (63ms)
+    DepositHolder
+      getDeposit
+        ✓ should have correct initial value
+        ✓ should be possible to ask deposit from any address
+        ✓ should be possible to send a transaction to getDeposit (67ms)
+        ✓ should not be possible to send a transaction with value to getDeposit
+      setDeposit
+        ✓ should not be possible to set deposit if asking from wrong owner
+        ✓ should not be possible to set deposit to 0
+        ✓ should not be possible to set deposit if no change
+        ✓ should not be possible to set deposit if pass value
+        ✓ should be possible to set deposit (137ms)
+      setDeposit a second time
+        ✓ should not be possible to set deposit again if same one (53ms)
+        ✓ should be possible to set new deposit (143ms)
+        ✓ should be possible to set old deposit (157ms)
+      setDeposit a second time after an owner change
+        ✓ should not be possible to set deposit if old owner
+        ✓ should not be possible to set deposit if same
+        ✓ should be possible to set deposit (109ms)
+    TollBoothOperator
+      getDeposit
+        ✓ should have correct initial value
+        ✓ should be possible to ask deposit from any address (66ms)
+        ✓ should be possible to send a transaction to getDeposit (117ms)
+        ✓ should not be possible to send a transaction with value to getDeposit
+      setDeposit
+        ✓ should not be possible to set deposit if asking from wrong owner
+        ✓ should not be possible to set deposit to 0
+        ✓ should not be possible to set deposit if no change (57ms)
+        ✓ should not be possible to set deposit if pass value
+        ✓ should be possible to set deposit (798ms)
+      setDeposit in TollBoothOperator is not pausable
+        ✓ should be possible to get deposit if paused (91ms)
+        ✓ should be possible to set deposit (137ms)
+      setDeposit a second time
+        ✓ should not be possible to set deposit again if same one (50ms)
+        ✓ should be possible to set new deposit (162ms)
+        ✓ should be possible to set old deposit (114ms)
+      setDeposit a second time after an owner change
+        ✓ should not be possible to set deposit if old owner
+        ✓ should not be possible to set deposit if same
+        ✓ should be possible to set deposit (139ms)
+
+
+  TestMultiplierHolder
+    ✓ testInitialMultiplierValues (120ms)
+    ✓ testCanSetMultiplier (140ms)
+    ✓ testCanUnsetMultiplier (281ms)
+    ✓ testCanSetAndUnsetManyMultipliers_MultiplierHolder (4426ms)
+    ✓ testCanSetAndUnsetManyMultipliers_TollBoothOperator (3282ms)
+
+
+  Contract: MultiplierHolder
+    ✓ should have correct number of functions (53ms)
+    MultiplierHolder
+      getMultiplier
+        ✓ should have correct initial value (70ms)
+        ✓ should be possible to ask for multiplier from any address (40ms)
+        ✓ should be possible to send a transaction to getMultiplier (58ms)
+        ✓ should not be possible to send a transaction with value to getMultiplier (98ms)
+      setMultiplier
+        ✓ should not be possible to set multiplier if asking from wrong owner (54ms)
+        ✓ should not be possible to set multiplier if type is 0 (43ms)
+        ✓ should not be possible to set multiplier if no change (138ms)
+        ✓ should not be possible to set multiplier if pass value
+        ✓ should be possible to set 1 multipliers (213ms)
+      setMultiplier a second time
+        ✓ should be possible to set another multiplier with values type0 - zero (132ms)
+        ✓ should be possible to set another multiplier with values type0 - multiplier1 (146ms)
+        ✓ should be possible to set another multiplier with values type1 - multiplier0 (125ms)
+        ✓ should be possible to set another multiplier with values type1 - multiplier1 (149ms)
+      setMultiplier a second time after an owner change
+        ✓ should not be possible to set another multiplier if old owner
+        ✓ should not be possible to set multiplier if same
+        ✓ should be possible to set another multiplier (127ms)
+      stress test
+        ✓ should be possible to set and unset 500 multipliers
+    TollBoothOperator
+      getMultiplier
+        ✓ should have correct initial value (107ms)
+        ✓ should be possible to ask for multiplier from any address (52ms)
+        ✓ should be possible to send a transaction to getMultiplier (80ms)
+        ✓ should not be possible to send a transaction with value to getMultiplier
+      setMultiplier
+        ✓ should not be possible to set multiplier if asking from wrong owner (53ms)
+        ✓ should not be possible to set multiplier if type is 0 (105ms)
+        ✓ should not be possible to set multiplier if no change (124ms)
+        ✓ should not be possible to set multiplier if pass value
+        ✓ should be possible to set 1 multipliers (178ms)
+      setMultiplier in TollBoothOperator is not pausable
+        ✓ should be possible to check getMultiplier if paused
+        ✓ should be possible to set multiplier if paused (194ms)
+      setMultiplier a second time
+        ✓ should be possible to set another multiplier with values type0 - zero (137ms)
+        ✓ should be possible to set another multiplier with values type0 - multiplier1 (142ms)
+        ✓ should be possible to set another multiplier with values type1 - multiplier0 (145ms)
+        ✓ should be possible to set another multiplier with values type1 - multiplier1 (259ms)
+      setMultiplier a second time after an owner change
+        ✓ should not be possible to set another multiplier if old owner
+        ✓ should not be possible to set multiplier if same
+        ✓ should be possible to set another multiplier (147ms)
+      stress test
+        ✓ should be possible to set and unset 500 multipliers
+
+
+  TestTollBoothHolder
+    ✓ testInitialTollBoothHoldingValues (111ms)
+    ✓ testCanAddTollBooth (132ms)
+    ✓ testCanRemoveTollBooth (181ms)
+    ✓ testCanAddAndRemoveManyTollBooths_TollBoothHolder (3194ms)
+    ✓ testCanAddAndRemoveManyTollBooths_RoutePriceHolderMock (3117ms)
+    ✓ testCanAddAndRemoveManyTollBooths_TollBoothOperator (2888ms)
+
+
+  Contract: TollBoothHolder
+    ✓ should have correct number of functions (59ms)
+    TollBoothHolder
+      isTollBooth
+        ✓ should have correct initial value (165ms)
+        ✓ should be possible to ask if is a toll booth from any address
+        ✓ should be possible to send a transaction to isTollBooth (61ms)
+        ✓ should not be possible to send a transaction with value to isTollBooth (72ms)
+      addTollBooth
+        ✓ should not be possible to add toll booth if asking from wrong owner
+        ✓ should not be possible to add toll booth if 0x address (63ms)
+        ✓ should not be possible to add toll booth if already added (80ms)
+        ✓ should not be possible to add toll booth if pass value
+        ✓ should be possible to add 1 toll booth (227ms)
+      addTollBooth a second time
+        ✓ should not be possible to add toll booth if same one
+        ✓ should be possible to add another toll booth (230ms)
+      addTollBooth a second time after an owner change
+        ✓ should not be possible to add another toll booth if old owner
+        ✓ should not be possible to add the same toll booth
+        ✓ should be possible to add another toll booth (212ms)
+      removeTollBooth
+        ✓ should not be possible to remove toll booth if wrong owner
+        ✓ should not be possible to remove toll booth if not a toll booth
+        ✓ should not be possible to remove toll booth if address is 0x
+        ✓ should not be possible to remove toll booth if pass value
+        ✓ should not be possible to remove same toll booth twice (55ms)
+        ✓ should be possible to remove first toll booth (225ms)
+        ✓ should be possible to remove second toll booth (243ms)
+      removeTollBooth after an owner change
+        ✓ should not be possible to remove toll booth if wrong owner (38ms)
+        ✓ should be possible to remove first toll booth (318ms)
+      stress test
+        ✓ should be possible to add and remove 500 booths
+    TollBoothOperator
+      isTollBooth
+        ✓ should have correct initial value (157ms)
+        ✓ should be possible to ask if is a toll booth from any address (52ms)
+        ✓ should be possible to send a transaction to isTollBooth (47ms)
+        ✓ should not be possible to send a transaction with value to isTollBooth
+      addTollBooth
+        ✓ should not be possible to add toll booth if asking from wrong owner
+        ✓ should not be possible to add toll booth if 0x address
+        ✓ should not be possible to add toll booth if already added (63ms)
+        ✓ should not be possible to add toll booth if pass value
+        ✓ should be possible to add 1 toll booth (314ms)
+      addTollBooth in TollBoothOperator is not pausable
+        ✓ should be possible to check is toll booth if paused
+        ✓ should be possible to add 1 toll booth (256ms)
+      addTollBooth a second time
+        ✓ should not be possible to add toll booth if same one
+        ✓ should be possible to add another toll booth (266ms)
+      addTollBooth a second time after an owner change
+        ✓ should not be possible to add another toll booth if old owner
+        ✓ should not be possible to add the same toll booth (44ms)
+        ✓ should be possible to add another toll booth (297ms)
+      removeTollBooth
+        ✓ should not be possible to remove toll booth if wrong owner (43ms)
+        ✓ should not be possible to remove toll booth if not a toll booth
+        ✓ should not be possible to remove toll booth if address is 0x
+        ✓ should not be possible to remove toll booth if pass value
+        ✓ should not be possible to remove same toll booth twice (58ms)
+        ✓ should be possible to remove first toll booth (246ms)
+        ✓ should be possible to remove second toll booth (233ms)
+      removeTollBooth in TollBoothOperator is not pausable
+        ✓ should be possible to remove first toll booth (254ms)
+      removeTollBooth after an owner change
+        ✓ should not be possible to remove toll booth if wrong owner
+        ✓ should be possible to remove first toll booth (220ms)
+      stress test
+        ✓ should be possible to add and remove 500 booths
+
+
+  TestRoutePriceHolder
+    ✓ testInitialTollBoothHoldingValues (86ms)
+    ✓ testCanAddTollBooth (139ms)
+    ✓ testInitialRoutePrices (97ms)
+    ✓ testCanSetRoutePrice (159ms)
+    ✓ testCanSetRoutePriceBackToZero (161ms)
+    ✓ testCanAddAndRemoveManyRoutePrices_RoutePriceHolderMock (2648ms)
+    ✓ testCanAddAndRemoveManyRoutePrices_TollBoothOperator (2538ms)
+
+
+  Contract: RoutePriceHolder inheritance tree
+    ✓ should have correct number of functions (102ms)
+    RoutePriceHolder
+      getRoutePrice
+        ✓ should have correct initial value (260ms)
+        ✓ should be possible to ask route price from any address
+        ✓ should be possible to ask route price of zero (63ms)
+        ✓ should be possible to ask route price of same entry and exit
+        ✓ should be possible to send a transaction to getRoutePrice (64ms)
+        ✓ should not be possible to send a transaction with value to getRoutePrice (75ms)
+      setRoutePrice
+        ✓ should not be possible to set route price if asking from wrong owner
+        ✓ should not be possible to set price for entry that is 0
+        ✓ should not be possible to set price for exit that is 0
+        ✓ should not be possible to set price for entry and exit that are the same
+        ✓ should not be possible to set price for entry that is not a tollbooth (58ms)
+        ✓ should not be possible to set price for exit that is not a tollbooth
+        ✓ should not be possible to set price when both entry and exit are not a tollbooth
+        ✓ should not be possible to set price if no change (68ms)
+        ✓ should not be possible to set price if pass value
+        ✓ should be possible to set price (268ms)
+      setRoutePrice a second time
+        ✓ should not be possible to set price again if same one
+        ✓ should be possible to set new price on same route (253ms)
+        ✓ should be possible to set back old price on same route (322ms)
+        ✓ should be possible to set price back to zero on same route (264ms)
+        ✓ should be possible to set same price on other route (244ms)
+        ✓ should be possible to set other price on other route (275ms)
+        ✓ should be possible to set same price on reverse route (307ms)
+        ✓ should be possible to set other price on reverse route (293ms)
+      setRoutePrice a second time after an owner change
+        ✓ should not be possible to set price if old owner
+        ✓ should not be possible to set price if same price (41ms)
+        ✓ should be possible to change price on same route (256ms)
+        ✓ should be possible to set price on a new route (275ms)
+      stress test
+        ✓ should be possible to set and unset 500 route prices
+    TollBoothOperator
+      getRoutePrice
+        ✓ should have correct initial value (198ms)
+        ✓ should be possible to ask route price from any address (56ms)
+        ✓ should be possible to ask route price of zero
+        ✓ should be possible to ask route price of same entry and exit
+        ✓ should be possible to send a transaction to getRoutePrice (56ms)
+        ✓ should not be possible to send a transaction with value to getRoutePrice
+      setRoutePrice
+        ✓ should not be possible to set route price if asking from wrong owner
+        ✓ should not be possible to set price for entry that is 0
+        ✓ should not be possible to set price for exit that is 0
+        ✓ should not be possible to set price for entry and exit that are the same
+        ✓ should not be possible to set price for entry that is not a tollbooth
+        ✓ should not be possible to set price for exit that is not a tollbooth
+        ✓ should not be possible to set price when both entry and exit are not a tollbooth
+        ✓ should not be possible to set price if no change (100ms)
+        ✓ should not be possible to set price if pass value
+        ✓ should be possible to set price (288ms)
+      setRoutePrice in TollBoothOperator is not pausable
+        ✓ should be possible to get price if paused
+        ✓ should be possible to set price (420ms)
+      setRoutePrice a second time
+        ✓ should not be possible to set price again if same one
+        ✓ should be possible to set new price on same route (400ms)
+        ✓ should be possible to set back old price on same route (376ms)
+        ✓ should be possible to set price back to zero on same route (255ms)
+        ✓ should be possible to set same price on other route (269ms)
+        ✓ should be possible to set other price on other route (245ms)
+        ✓ should be possible to set same price on reverse route (247ms)
+        ✓ should be possible to set other price on reverse route (258ms)
+      setRoutePrice a second time after an owner change
+        ✓ should not be possible to set price if old owner
+        ✓ should not be possible to set price if same price
+        ✓ should be possible to change price on same route (247ms)
+        ✓ should be possible to set price on a new route (283ms)
+      stress test
+        ✓ should be possible to set and unset 500 route prices
+
+
+  TestTollBoothOperator
+    ✓ testHasAddedBoothsRoutesAndMultipliers (173ms)
+
+
+  Contract: TollBoothOperator
+    ✓ should have correct number of functions (73ms)
+    deploy
+      ✓ should not be possible to deploy a TollBoothOperator with deposit 0 - 1 (144ms)
+      ✓ should not be possible to deploy a TollBoothOperator with deposit 0 - 2 (46ms)
+      ✓ should not be possible to deploy a TollBoothOperator with regulator 0
+      ✓ should not be possible to deploy a TollBoothOperator with value
+      ✓ should be possible to deploy a TollBoothOperator with parameters - 1 (161ms)
+      ✓ should be possible to deploy a TollBoothOperator with parameters - 2 (157ms)
+    Vehicle Operations
+      enterRoad
+        ✓ should not be possible to enter road if paused (54ms)
+        ✓ should not be possible to enter through non booth
+        ✓ should not be possible to enter if not registered vehicle
+        ✓ should not be possible to enter if vehicle type without multiplier
+        ✓ should not be possible to enter if not depositing enough
+        ✓ should not be possible to enter if giving a zero hash
+        ✓ should not be possible to enter if giving a hash currently in use (68ms)
+        ✓ should not be possible to enter if giving a hash previously in use (111ms)
+        ✓ should be possible to enter road (158ms)
+        ✓ should be possible to enter road with more than required deposit (167ms)
+        ✓ should be possible to enter road for 2 vehicles with deposit change in between (260ms)
+      reportExitRoad with exact deposited
+        ✓ should not be possible to report exit road if paused (44ms)
+        ✓ should not be possible to report exit road if not from a toll booth
+        ✓ should not be possible to report exit road if secret does not match a hash
+        ✓ should not be possible to report exit road if already exited with same secret (89ms)
+        ✓ should not be possible to report exit road on same booth as entry
+        ✓ should not be possible to report exit road if pass value
+        ✓ should not be possible to report exit road if vehicle lost type before exit (52ms)
+        ✓ should not be possible to report exit road if vehicle lost multiplier before exit (57ms)
+        ✓ should be possible to report exit road on route with known price (390ms)
+        ✓ should be possible to report exit road on route with known price at deposit (347ms)
+        ✓ should be possible to report exit road on route with known price above deposit (351ms)
+        ✓ should be possible to report exit road by using new multiplier at time of exit (410ms)
+        ✓ should be possible to report exit road on route with unknown price (357ms)
+      reportExitRoad with excessive deposited
+        ✓ should be possible to report exit road on route with known price below deposited (431ms)
+        ✓ should be possible to report exit road on route with known price at deposited (437ms)
+        ✓ should be possible to report exit road on route with known price above deposited (311ms)
+        ✓ should be possible to report exit road on route with unknown price (259ms)
+      reportExitRoad with 2 vehicles on same route
+        with known price
+          ✓ should be possible to report exit road of first vehicle on route with known price (318ms)
+          ✓ should be possible to report exit road of second vehicle on route with known price (316ms)
+          ✓ should be possible to report exit road of vehicles 0 then 1 on route with known price (365ms)
+          ✓ should be possible to report exit road of vehicles 1 then 0 on route with known price (333ms)
+        with unknown price
+          ✓ should be possible to report exit road of first vehicle on route with unknown price (290ms)
+          ✓ should be possible to report exit road of second vehicle on route with unknown price (321ms)
+          ✓ should be possible to report exit road of vehicles 0 then 1 on route with unknown price (350ms)
+          ✓ should be possible to report exit road of vehicles 1 then 0 on route with unknown price (344ms)
+      reportExitRoad with 2 vehicles on different routes
+        with both known price
+          ✓ should be possible to report exit road of first vehicle on its route (380ms)
+          ✓ should be possible to report exit road of second vehicle on its route (289ms)
+          ✓ should be possible to report exit road of vehicles 0 then 1 on their routes (320ms)
+          ✓ should be possible to report exit road of vehicles 1 then 0 on their routes (332ms)
+        with one known price and another unknown
+          ✓ should be possible to report exit road of vehicles 0 then 1 on own routes (490ms)
+          ✓ should be possible to report exit road of vehicles 1 then 0 on own routes (414ms)
+        with both unknown price
+          ✓ should be possible to report exit road of first vehicle on its route (341ms)
+          ✓ should be possible to report exit road of second vehicle on its route (352ms)
+          ✓ should be possible to report exit road of vehicles 0 then 1 on own routes (359ms)
+          ✓ should be possible to report exit road of vehicles 1 then 0 on own routes (365ms)
+      Pending payments with vehicles on same route, then setRoutePrice
+        ✓ should be possible to query the pending payments count (59ms)
+        ✓ should be possible to query the pending payments count from any account
+        ✓ should not be possible to send a transaction with value to query the pending payments count
+        ✓ should be possible to set the base route price below both deposits and reduce count by 1 (341ms)
+        ✓ should be possible to set the base route price at first exited vehicle deposit and reduce count by 1 (349ms)
+        ✓ should be possible to set the base route price above both deposits and reduce count by 1 (321ms)
+        Clear one more pending payment
+          ✓ should be possible to set the base route price below both deposits then clear the second by hand (335ms)
+          ✓ should be possible to set the base route price above both deposits then clear the second by hand (761ms)
+          ✓ should not be possible to clear 2 when there are only 1 left (111ms)
+      Pending payments with vehicles on different routes, then setRoutePrice
+        ✓ should be possible to query the pending payments count (88ms)
+        ✓ should be possible to set the first base route price below second exited's deposit and reduce count by 1 (389ms)
+        ✓ should be possible to set the first base route price at second exited's deposit and reduce count by 1 (393ms)
+        ✓ should be possible to set the first base route price above second exited's deposit and reduce count by 1 (377ms)
+        ✓ should be possible to set the second base route price below first exited's deposit and reduce count by 1 (380ms)
+        ✓ should be possible to set the second base route price at first exited's deposit and reduce count by 1 (366ms)
+        ✓ should be possible to set the second base route price above first exited's deposit and reduce count by 1 (382ms)
+      Scalability
+        ✓ should add 100 entry / exit pairs on a known route for same vehicle (16682ms)
+        ✓ should add 100 entry / exit pairs on an unknown route for same vehicle (16492ms)
+        ✓ should clear 100 pending payments with same price, 50 at a time (13778ms)
+Highest pending clearing step found: 176
+        ✓ should find highest clearing step (241095ms)
+    Withdraw from 1 vehicle
+      ✓ should have 0 collected (42ms)
+      ✓ should not be possible to withdraw if no vehicle has exited
+      ✓ should be possible to withdraw if vehicle has exited (217ms)
+    Withdraw from 2 vehicles
+      ✓ should have 0 collected (115ms)
+      ✓ should not be possible to withdraw if no vehicle has exited
+      ✓ should be possible to withdraw if second vehicle has exited (365ms)
+      ✓ should be possible to withdraw if first vehicle has exited (174ms)
+      ✓ should be possible to withdraw after both vehicles have exited (549ms)

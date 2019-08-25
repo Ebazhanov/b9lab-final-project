@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exam UI</title>
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <script src="./app.js"></script>
+</head>
+<body>
+  <h1>Exam GUI</h1>
+  <div class="alert alert-primary" role="alert">
+  <span id="status"></span>
+  </div>
+  <div id="accounts_drop_down_msg"></div>
+  <select id="accounts_drop_down">
+  </select>
+  <ul class="nav nav-tabs" id="examTab" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" id="regulator-tab" data-toggle="tab" href="#regulator" role="tab" aria-controls="regulator" aria-selected="true">Regulator</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="tollboothoperator-tab" data-toggle="tab" href="#tollboothoperator" role="tab" aria-controls="tollboothoperator" aria-selected="false">Toll Booth Operator</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="vehicles-tab" data-toggle="tab" href="#vehicles" role="tab" aria-controls="vehicles" aria-selected="false">Vehicles</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="tollbooths-tab" data-toggle="tab" href="#tollbooths" role="tab" aria-controls="tollbooths" aria-selected="false">Toll Booths</a>
+    </li>
+  </ul>
+  <div class="tab-content" id="examTabContent">
+    <div class="tab-pane fade show active" id="regulator" role="tabpanel" aria-labelledby="regulator-tab">
+      <span id="regBal"></span>
+      <div class="row">
+      <div class="col-md-6">
+          <b><u>Create New Operator</u></b><br/>
+            Operator Address:<br/>
+            <input type="text" name="opadd" id="opadd"><br/>
+            Operator Deposit<br/>
+            <input type="number" name="opbal" id="opbal"><br/><br/>
+            <button type="button" class="btn btn-primary" id="opbtn">Create Operator</button>
+      </div>
+      <div class="col-md-6">
+          <b><u>Set Vehicle Types</u></b><br/>
+          Vehicle Address:<br/>
+            <input type="text" name="veadd" id="veadd"><br/>
+            Vehicle type<br/>
+            <input type="number" name="vetype" id="vetype"><br/><br/>
+            <button type="button" class="btn btn-primary" id="vetypebtn" >Create Vehicle Type</button>
+        </div>
+      </div>
+
+
+    </div>
+    <div class="tab-pane fade" id="tollboothoperator" role="tabpanel" aria-labelledby="tollboothoperator-tab">
+        <div class="row">
+          <div class="col-md-12"><br/>
+            <span id="tb_operator"></span><br/><br/>
+          <select id="tb_select">
+            </select>
+          </input>
+          <br/><br/><br/>
+          </div>
+            <div class="col-md-4">
+                <b><u>Add Toll Booth</u></b><br/>
+                  Toll Booth Address:<br/>
+                  <input type="text" name="toladd" id="toladd"><br/><br/>
+                  <button type="button" class="btn btn-primary" id="tolbtn">Add Toll Booth</button>
+            </div>
+            <div class="col-md-4">
+                <b><u>Set Route Base price</u></b><br/>
+                Booth 1:<br/>
+                  <input type="text" name="toladd1" id="toladd1"><br/>
+                  Booth 2:<br/>
+                  <input type="text" name="toladd2" id="toladd2"><br/>
+                  Route Price:<br/>
+                  <input type="number" name="tolPrice" id="tolPrice"><br/><br/>
+                  <button type="button" class="btn btn-primary" id="tolroute" >Set Route Price</button>
+              </div>
+              <div class="col-md-4">
+                  <b><u>Set Multiplier</u></b><br/>
+                  Vehicle type:<br/>
+                    <input type="number" name="vtype" id="vtype"><br/>
+                    Multiplier:<br/>
+                    <input type="number" name="vmult" id="vmult"><br/><br/>
+                    <button type="button" class="btn btn-primary" id="setmultiplier" >Set Muliplier</button>
+                </div>
+            </div>
+    </div>
+    <div class="tab-pane fade" id="vehicles" role="tabpanel" aria-labelledby="vehicles-tab">
+      
+      <div class="row">
+          <div class="col-md-12"><br/>
+            <span id="tb_operator1"></span><br/><br/>
+          <select id="tb_select1">
+            </select>
+          <br/><br/><br/>
+          </div>
+          <div class="col-md-3">
+              <b><u>See your vehicle Address balance</u></b><br/>
+              <span id="vehicleBal">Vehicle Balance is loading...</span>
+              <br/><br/><br/>
+
+              <b><u>Enter Exit Secret to hash</u></b><br/>
+              <input type="text" name="secret" id="secret"><br/><br/>
+              <button type="button" class="btn btn-primary" id="genhash" >Generate Hash</button>
+              <br/>
+              <span id="hash"></span>
+
+              <br/>
+               
+          </div>
+          <div class="col-md-3">
+              <b><u>Make an entry deposit</u></b><br/>
+              <br/>
+              Enter Entry Booth:<br/>
+                <input type="text" name="entBooth" id="entBooth"><br/>
+                Enter Exit Hash:<br/>
+                <input type="text" name="entSecret" id="entSecret"><br/>
+                Amount to pay:<br/>
+                <input type="text" name="entAmt" id="entAmt"><br/><br/>
+                <button type="button" class="btn btn-primary" id="entdep" >Make Deposit</button>
+            </div>
+            <div class="col-md-6">
+                <b><u>Display entry & exit history from selected operator:</u></b><br/>
+                <button type="button" class="btn btn-primary" id="extHashbtn" >Get History</button><br/>
+                <div class="container"> 
+                    <div class="row"> 
+                        <b>ENTRY HISTORY</b>
+                       <div class="col"><span id="entryhistory">Entry history will display here...</span><br/></div>
+                       <b>EXIT HISTORY</b>
+                       <div class="col"><span id="exithistory">Exit history will display here...</span></div> 
+                    </div> 
+                 </div>
+              </div>
+          </div>
+    </div>
+    <div class="tab-pane fade" id="tollbooths" role="tabpanel" aria-labelledby="tollbooths-tab">
+        <div class="row">
+            <div class="col-md-12">
+              <span id="tb_operator2">You do not belong to any TollBoothOperators, you are not a TollBooth</span><br/><br/>
+            <select id="tb_select2">
+              </select><br/><br/><br/>
+            </div>
+            <div class="col-md-4">
+                <b><u>Report a vehicle exit</u></b><br/>
+                Enter Exit Secret:<br/>
+                <input type="text" name="exitsecret" id="exitsecret"><br/><br/>
+                <button type="button" class="btn btn-primary" id="exitsecretbtn" >Exit Booth</button>
+                
+            </div>
+            <div class="col-md-4">
+                <b><u>Report of vehicle exit</u></b><br/>
+                <span id="report_here"></span>
+                <br/>
+              </div>
+            </div>
+    </div>
+  </div>
+</body>
+<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+<script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</html>
