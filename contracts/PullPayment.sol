@@ -42,7 +42,7 @@ contract PullPayment is PullPaymentA{
         require(payment != uint(0), "no payment available");
         payments[msg.sender] = uint(0);
         emit LogPaymentWithdrawn(msg.sender, payment);
-        (success,) = msg.sender.call.value(payment)("");
+        (success,) = msg.sender.transfer(payment)("");
         require(success, "payment transfer failed");
     }
 

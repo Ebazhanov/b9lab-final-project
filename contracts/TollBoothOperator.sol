@@ -150,7 +150,7 @@ TollBoothOperatorI{
                 hash,
                 entryBooth,
                 msg.sender);
-                bytes32 routeHash = keccak256(abi.encode(entryBooth,msg.sender));
+                bytes32 routeHash = keccak256(abi.encodePacked(entryBooth,msg.sender));
                 pendingPayments[routeHash].push(hash);
                 status = 2;
             }else{
@@ -189,7 +189,7 @@ TollBoothOperatorI{
         view
         public
         returns (uint count){
-           bytes32 routeHash = keccak256(abi.encode(entryBooth,exitBooth));
+           bytes32 routeHash = keccak256(abi.encodePacked(entryBooth,exitBooth));
            count = pendingPayments[routeHash].length;
         }
 
@@ -247,7 +247,7 @@ TollBoothOperatorI{
             require(count>0,"Count cannot be 0");
             require(pending>=count,"There are fewer pending payments");
             uint fee = getRoutePrice(entryBooth,exitBooth);
-            bytes32 routeHash = keccak256(abi.encode(entryBooth,exitBooth));
+            bytes32 routeHash = keccak256(abi.encodePacked(entryBooth,exitBooth));
             for(uint i = 0;i<=(count-1);i++){
                 bytes32 hash = pendingPayments[routeHash][i];
                 if(hash!=0){
@@ -282,9 +282,9 @@ TollBoothOperatorI{
             }
             }
             for (pending = 0; pending<getPendingPaymentCount(entryBooth,exitBooth)-1; pending++){
-                    pendingPayments[keccak256(abi.encode(entryBooth,exitBooth))][pending] = pendingPayments[keccak256(abi.encode(entryBooth,exitBooth))][pending+1];
+                    pendingPayments[keccak256(abi.encodePacked(entryBooth,exitBooth))][pending] = pendingPayments[keccak256(abi.encodePacked(entryBooth,exitBooth))][pending+1];
                 }
-                pendingPayments[keccak256(abi.encode(entryBooth,exitBooth))].length--;
+                pendingPayments[keccak256(abi.encodePacked(entryBooth,exitBooth))].length--;
             success = true;
         }
 
@@ -295,7 +295,7 @@ TollBoothOperatorI{
         view
         public
         returns(uint priceWeis){
-            priceWeis = routePrice[keccak256(abi.encode(entryBooth,exitBooth))];
+            priceWeis = routePrice[keccak256(abi.encodePacked(entryBooth,exitBooth))];
         }
     /**
      * This function is commented out otherwise it prevents compilation of the completed contracts.
@@ -321,7 +321,7 @@ TollBoothOperatorI{
             require(entryBooth!=exitBooth,"Entry and exit booths are the same");
             require(entryBooth!=address(0) && exitBooth!=address(0),"Both addresses must be valid");
             require(isTollBooth(entryBooth)==true && isTollBooth(exitBooth)==true,"The booths are not registered");
-            bytes32 routeHash = keccak256(abi.encode(entryBooth,exitBooth));
+            bytes32 routeHash = keccak256(abi.encodePacked(entryBooth,exitBooth));
             require(routePrice[routeHash]!=priceWeis,"There is no change in price");
             routePrice[routeHash] = priceWeis;
             uint pending = getPendingPaymentCount(entryBooth,exitBooth);
@@ -332,7 +332,7 @@ TollBoothOperatorI{
             priceWeis);
             if(pending>0){
                 //clearSomePendingPayments(entryBooth,exitBooth,1);
-                bytes32 hash = pendingPayments[keccak256(abi.encode(entryBooth,exitBooth))][0];
+                bytes32 hash = pendingPayments[keccak256(abi.encodePacked(entryBooth,exitBooth))][0];
                 uint multiplier = usedSecrets[hash].multiplier;
                 uint depositedWei = usedSecrets[hash].depositedWeis;
                 address vehicle = usedSecrets[hash].vehicle;
@@ -358,9 +358,9 @@ TollBoothOperatorI{
                     0);
                 }
                 for (pending = 0; pending<getPendingPaymentCount(entryBooth,exitBooth)-1; pending++){
-                    pendingPayments[keccak256(abi.encode(entryBooth,exitBooth))][pending] = pendingPayments[keccak256(abi.encode(entryBooth,exitBooth))][pending+1];
+                    pendingPayments[keccak256(abi.encodePacked(entryBooth,exitBooth))][pending] = pendingPayments[keccak256(abi.encodePacked(entryBooth,exitBooth))][pending+1];
                 }
-                pendingPayments[keccak256(abi.encode(entryBooth,exitBooth))].length--;
+                pendingPayments[keccak256(abi.encodePacked(entryBooth,exitBooth))].length--;
             }
             success = true;
          }
