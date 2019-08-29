@@ -11,13 +11,11 @@ Check if Node.js and truffle are installed by typing
 
 2. Set up Truffle environment in `truffle-config.js`
 
-3. Set up the migration script in `2-deploy_migration.js` to deploy the contract
-
-4. Deploy MerxToken by  running `truffle migrate`
+3. Deploy by  running `truffle migrate`
 
 5. Run `truffle compile` to compile the token code
 
-5. Run  Test 1 (`truffle test`, see Tests)
+5. Run  test (`truffle test`)
 
 
 
@@ -27,7 +25,7 @@ Check if Node.js and truffle are installed by typing
 
 2. Run `npm install`
 
-3. Run `npm run dev` (lite-server)
+3. Run `npm run dev` 
 
 
 #IMAGES#
